@@ -1,0 +1,57 @@
+/// Media query mixins
+/// @author Glenn McComb
+/// @link https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
+$breakpoints: (
+  sm: 48em,         //768px
+  md: 62em,         //992px
+  lg: 75em          //1200px
+);
+
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breapoint}.'; 
+  }
+}
+
+@mixin respond-belowe($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breapoint}.'; 
+  }
+}
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+// size
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}

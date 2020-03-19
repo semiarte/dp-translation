@@ -1,0 +1,14 @@
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-container-vertical>.swiper-pagination-bullets {
+    right: 4rem;
+    top: 40vh;
+    transform: none;
+}
+
+.swiper-pagination-bullet-active {
+    color: $en;
+}

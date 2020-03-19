@@ -1,0 +1,54 @@
+.elem-group {
+    position: relative;
+    margin-bottom: 40px;
+
+    input {
+        border-top: none;
+        border-left: none;
+        border-bottom: 1px solid #212121;
+        border-right: none;
+        width: 100%;
+    }
+
+    label {
+        position: absolute;
+        top: -10px;
+        transition: top .2s ease-in-out,  font-size .2s ease-in-out;
+        margin: 10px;
+    }
+
+    .active {
+        top: -45px;
+        font-size: 70%;
+    }
+}
+
+input, textarea {
+    font-size: 70%;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #212121;
+    margin-bottom: .5em;
+    min-height: 100px;
+}
+
+label {
+    font-size: 75%;
+    padding: 0 10px;
+}
+
+[type="submit"] {
+    font-size: 70%;
+    padding: 1em;
+    border: none;
+    color: white;
+    background-color: $sp;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+
+    &:hover {
+        background-color: $en;
+    }
+}

@@ -1,0 +1,29 @@
+.navigation_social {
+    position: absolute;
+    top: 40%;
+    left: 3.12rem;
+    transform: rotate(-90deg) translateY(100%);
+    transform-origin: bottom left;
+    white-space: nowrap;
+    z-index: 999;
+    font-size: 2.5em;
+}
+
+.navigation_social__item {
+    display: inline-block;
+
+    a {
+        display: inline-block;
+        pointer-events: auto;
+        font-size: 45%;
+        text-decoration: none;
+        overflow: hidden;
+        position: relative;
+        vertical-align: top;
+        padding-right: 1em;
+        color: black;
+        @include on-event(){
+            color: $en;
+        }
+    }
+}
