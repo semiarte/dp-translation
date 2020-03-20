@@ -606,8 +606,18 @@ header {
   padding-left: 3.12rem;
 }
 
+header span {
+  display: none;
+}
+
 header .sp {
   padding-left: 22px;
+}
+
+@media (min-width: 75em) {
+  header span {
+    display: inline;
+  }
 }
 
 nav {

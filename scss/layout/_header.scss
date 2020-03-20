@@ -1,8 +1,18 @@
 header {
     padding-left: 3.12rem;
 
+    span {
+        display: none;
+    }
+
     .sp {
         padding-left: 22px;
+    }
+}
+
+@include respond-above(lg) {
+    header span {
+        display: inline;
     }
 }
 
