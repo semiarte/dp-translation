@@ -507,6 +507,17 @@ li {
   color: #ffbe09;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 999999;
+  opacity: 1;
+}
+
 .bar {
   position: relative;
   display: block;
@@ -534,8 +545,10 @@ li {
 
 .menu-button_close {
   display: none;
-  z-index: 9999;
-  margin-top: 2.5em;
+  z-index: 99999;
+  position: absolute;
+  right: 3.12rem;
+  top: 1.85em;
   cursor: pointer;
 }
 
@@ -562,7 +575,7 @@ li {
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   white-space: nowrap;
-  z-index: 999;
+  z-index: 9999;
   font-size: 2.5em;
 }
 
@@ -623,6 +636,47 @@ header .sp {
 nav {
   position: relative;
   padding-right: 3.12rem;
+}
+
+.nav_menu {
+  display: none;
+  background-color: #fafafa;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.nav_menu .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5%;
+}
+
+.nav_menu img {
+  border-radius: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav_menu li {
+  margin-bottom: 1.55em;
+}
+
+.nav_menu li a {
+  color: #ff3c6e;
+  list-style: none;
+  font-size: 3em;
+}
+
+.nav_menu li a:hover {
+  color: #278b9a;
 }
 
 .intro {

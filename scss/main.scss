@@ -9,11 +9,13 @@
         'base/flex',
         'base/typo';
 
-@import 'components/burger',
+@import 'components/loader',
+        'components/burger',
         'components/social',
         'components/swiper';
 
 @import 'layout/header',
+        'layout/navigation',
         'layout/intro',
         'layout/services',
         'layout/contact',
