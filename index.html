@@ -47,12 +47,11 @@
                         <h1>dp <span class="sp">traducción</span> <span class="en">translation</span> <span class="nl">vertaling</span></h1>
                     </header>
                     <div class="container">
-                        
                             <div class="col">
                                 <ul>
-                                    <li><a href="#">David Pérez</a></li>
-                                    <li><a href="#">Servicios</a></li>
-                                    <li><a href="#">Contacto</a></li>
+                                    <li><a href="#start">David Pérez</a></li>
+                                    <li><a href="#services">Servicios</a></li>
+                                    <li><a href="#end">Contacto</a></li>
                                 </ul>
                             </div>
                             <div class="col">
@@ -67,7 +66,7 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <!-- intro -->
-                    <div class="swiper-slide">
+                    <div id="start" class="swiper-slide">
                         <div class="container">
                             <div class="flex-row flex-row_align-center">
                                 <div class="col-7">
@@ -81,7 +80,7 @@
                         </div>
                     </div>
                     <!-- services -->
-                    <div class="swiper-slide">
+                    <div id="services" class="swiper-slide">
                         <div class="container">
                             <div class="flex-row flex-row_align-center">
                                 <div class="col-12">
@@ -93,7 +92,7 @@
                         </div>
                     </div>
                     <!-- contact -->
-                    <div class="swiper-slide">
+                    <div id="end" class="swiper-slide">
                         <div id="contact" class="container">
                             <div class="flex-row contact-heading">
                                 <div class="col-12">
@@ -145,23 +144,6 @@
         </footer>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-        <script>
-            var swiper = new Swiper('.swiper-container', {
-                direction: 'vertical',
-                slidesPerView: 1,
-                centeredSlides: true,
-                mousewheelControl: true,
-                mousewheel: true,
-                forceToAxis: true,
-                setWrapperSize: true,
-                autoHeight: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                    type: 'bullets',
-                },
-            });
-          </script>
-          <script src="js.js"></script>
+        <script src="js.js"></script>
     </body>
 </html>

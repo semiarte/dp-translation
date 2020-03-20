@@ -372,9 +372,13 @@ template {
           box-sizing: border-box;
 }
 
+body,
+html {
+  height: 100%;
+}
+
 body {
   position: relative;
-  height: 100%;
 }
 
 img {
@@ -417,7 +421,8 @@ img {
 }
 
 .grid-container {
-  background-color: rgba(255, 255, 255, 0.5);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, white 10%, rgba(255, 255, 255, 0) 100%);
   z-index: 9;
   display: -ms-grid;
   display: grid;
