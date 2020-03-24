@@ -42,10 +42,10 @@
                         <h1>dp <!-- <span class="sp">traducción</span> --> <span class="en">translation</span> <!-- <span class="nl">vertaling</span> --></h1>
                     </header>
                     <div class="nav-items">
-                        <ul>
+                        <ul role="navigation">
                             <li><a href="#start">David Pérez</a></li>
                             <li><a href="#services">Services</a></li>
-                            <li><a href="#end">Contact</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <!-- intro -->
-                    <div id="start" class="animate_topToBottom swiper-slide">
+                    <section id="start" class="animate_topToBottom swiper-slide">
                         <div class="container">
                             <div class="flex-row flex-row_align-center">
                                 <div class="col-7">
@@ -67,9 +67,9 @@
                                 <div class="col-5"><img class="dp-picture" src="foto-david-perez-traduccion-translate-vertaling.jpg" alt="Foto de David Pérez. Traducción, translate, vertaling"></div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                     <!-- services -->
-                    <div id="services" class="swiper-slide">
+                    <section id="services" class="swiper-slide">
                         <div class="container">
                             <div class="flex-row flex-row_align-center">
                                 <div class="col-12">
@@ -79,19 +79,13 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                     <!-- contact -->
-                    <div id="end" class="swiper-slide">
-                        <div id="contact" class="container">
-                            <div class="flex-row contact-heading">
-                                <div class="col-12">
-                                    <h2>contact</h2>
-                                </div>
-                            </div>
-                        </div>
+                    <section id="contact" class="swiper-slide">
                         <div class="container">
-                            <div class="flex-row">
+                            <div class="flex-row flex-row_align-center">
                                 <div class="col contact">
+                                    <h2>contact</h2>
                                     <p>If you would like to get ahold of me or to ask for a quote for your project, send me an email or fill in the form.</p>
                                     <ul>
                                         <li><a href="mailto:davidpb64@gmail.com">davidpb64@gmail.com</a></li>
@@ -120,7 +114,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div><!-- /swiper-wrapper-->
                 <!-- pagination -->
                 <div class="swiper-pagination"></div>

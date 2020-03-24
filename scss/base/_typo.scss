@@ -1,64 +1,68 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
-    color: black;
-    font-weight: 600;
-    font-size: 2.5em; //40px
+  color: black;
+  font-weight: 600;
+  font-size: 2.5em; //40px
 
-    span {
-        font-size: 45%; //18px
-        font-weight: 400;
-    }
+  span {
+    font-size: 45%; //18px
+    font-weight: 400;
+  }
 
-    span::after {
-        content: ' / ';
-    }
+  span::after {
+    content: " / ";
+  }
 
-    span:last-child::after {
-        content: '';
-    }
+  span:last-child::after {
+    content: "";
+  }
+}
 
+h2 {
+  margin-top: 0;
+  margin-bottom: 0.48717948717948717em;
 }
 
 p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 a {
-    text-decoration: none;
-    transition: .2s ease-in-out;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
 }
 
 main {
-    font-size: 1.625em;
+  font-size: 1.625em;
 
-    a {
-        color: $sp;
+  a {
+    color: $sp;
 
-        @include on-event(){
-            color: $en;
-        }
+    @include on-event() {
+      color: $en;
     }
+  }
 }
 
 strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .sp {
-    color: $sp;
+  color: $sp;
 }
 
 .en {
-    color: $en;
+  color: $en;
 }
 
 .nl {
-    color: $nl;
+  color: $nl;
 }
