@@ -367,6 +367,13 @@ template {
   }
 }
 
+.animate_topToBottom {
+  -webkit-animation-name: topToBottom;
+          animation-name: topToBottom;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
 *, ::after, ::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -690,17 +697,7 @@ header {
 }
 
 header span {
-  display: none;
-}
-
-header .sp {
-  padding-left: 22px;
-}
-
-@media (min-width: 75em) {
-  header span {
-    display: inline;
-  }
+  display: inline;
 }
 
 nav {
@@ -718,21 +715,19 @@ nav {
   z-index: 9999;
 }
 
-.nav_menu .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 5%;
+.nav_menu .nav-items {
+  position: relative;
+  height: 55vh;
 }
 
-.nav_menu img {
-  border-radius: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.nav_menu ul {
+  padding-left: 0;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .nav_menu li {
@@ -752,7 +747,8 @@ nav {
 .dp-picture {
   display: block;
   border-radius: 100%;
-  float: right;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-heading {

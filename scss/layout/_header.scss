@@ -1,22 +1,12 @@
 header {
-    padding-left: 3.12rem;
+  padding-left: 3.12rem;
 
-    span {
-        display: none;
-    }
-
-    .sp {
-        padding-left: 22px;
-    }
-}
-
-@include respond-above(lg) {
-    header span {
-        display: inline;
-    }
+  span {
+    display: inline;
+  }
 }
 
 nav {
-    position: relative;
-    padding-right: 3.12rem;
+  position: relative;
+  padding-right: 3.12rem;
 }
