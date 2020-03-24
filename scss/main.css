@@ -749,6 +749,12 @@ nav {
   color: #278b9a;
 }
 
+.dp-picture {
+  display: block;
+  border-radius: 100%;
+  float: right;
+}
+
 .contact-heading {
   padding-top: 8%;
 }
