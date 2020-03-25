@@ -1,15 +1,14 @@
 footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    z-index: 999;
-    margin-top: 2em;
-    padding: 1em 0;
-    background-color: #212121;
-    color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 999;
+  padding: 1em 0;
+  background-color: #212121;
+  color: white;
 
-    p {
-        margin: 0;
-        text-align: center;
-    }
+  p {
+    margin: 0;
+    text-align: center;
+  }
 }

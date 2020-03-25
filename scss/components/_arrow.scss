@@ -2,8 +2,15 @@
   z-index: 99999;
   position: absolute;
   left: 50%;
-  bottom: 12%;
+  bottom: 8%;
+  transform: translateX(-50%);
   cursor: pointer;
+  text-align: center;
+
+  p {
+    // display: inline;
+    font-size: 80%;
+  }
 
   .bar {
     background-color: black;
