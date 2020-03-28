@@ -374,6 +374,39 @@ template {
           animation-duration: 4s;
 }
 
+@-webkit-keyframes rightToLeft {
+  0% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rightToLeft {
+  0% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate_rightToLeft {
+  -webkit-animation-name: rightToLeft;
+          animation-name: rightToLeft;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
 *, ::after, ::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

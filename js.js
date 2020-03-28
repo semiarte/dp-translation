@@ -10,6 +10,7 @@ function showPage() {
 function open_menu() {
   $(".menu-button").hide();
   $(".menu-button_close").show();
+  $(".menu-button_close").addClass('animate_rightToLeft');
   $(".nav_menu").fadeIn();
 }
 // close hidden nav menu
