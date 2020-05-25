@@ -9,11 +9,6 @@
   }
 }
 
-.animate_topToBottom {
-  animation-name: topToBottom;
-  animation-duration: 4s;
-}
-
 @keyframes rightToLeft {
   0% {
     transform: translateX(120%);
@@ -28,4 +23,37 @@
 .animate_rightToLeft  {
   animation-name: rightToLeft;
   animation-duration: 2s;
+}
+
+
+@keyframes bottomToTop {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#start,
+#services {
+  opacity: 0;
+  transition: opacity .4s ease-in;
+  &.is-visible {
+    opacity: 1;
+    animation-name: topToBottom;
+    animation-duration: 4s;
+  }
+}
+
+#contact {
+  opacity: 0;
+  transition: opacity .4s ease-in;
+  &.is-visible {
+    opacity: 1;
+    animation-name: bottomToTop;
+    animation-duration: 4s;  
+  }
 }

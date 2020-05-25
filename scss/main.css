@@ -367,13 +367,6 @@ template {
   }
 }
 
-.animate_topToBottom {
-  -webkit-animation-name: topToBottom;
-          animation-name: topToBottom;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-}
-
 @-webkit-keyframes rightToLeft {
   0% {
     -webkit-transform: translateX(120%);
@@ -405,6 +398,62 @@ template {
           animation-name: rightToLeft;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+}
+
+@-webkit-keyframes bottomToTop {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottomToTop {
+  0% {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#start,
+#services {
+  opacity: 0;
+  -webkit-transition: opacity .4s ease-in;
+  transition: opacity .4s ease-in;
+}
+
+#start.is-visible,
+#services.is-visible {
+  opacity: 1;
+  -webkit-animation-name: topToBottom;
+          animation-name: topToBottom;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+#contact {
+  opacity: 0;
+  -webkit-transition: opacity .4s ease-in;
+  transition: opacity .4s ease-in;
+}
+
+#contact.is-visible {
+  opacity: 1;
+  -webkit-animation-name: bottomToTop;
+          animation-name: bottomToTop;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 *, ::after, ::before {
@@ -461,8 +510,8 @@ img {
 }
 
 .grid-container {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, white), to(rgba(255, 255, 255, 0)));
-  background: linear-gradient(to bottom, white 10%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 9;
   display: -ms-grid;
   display: grid;
@@ -718,7 +767,6 @@ li {
 }
 
 .down-arrow {
-  z-index: 99999;
   position: absolute;
   left: 50%;
   bottom: 8%;
@@ -774,28 +822,26 @@ svg #wheel {
           animation: scroll ease 2s infinite;
 }
 
-.swiper-container {
-  width: 100%;
-  height: 100vh;
-}
-
-.swiper-container-vertical > .swiper-pagination-bullets {
+.swiper-pagination {
+  position: fixed;
+  text-align: center;
+  -webkit-transition: .3s opacity;
+  transition: .3s opacity;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 10;
+  top: 50%;
   right: 4rem;
-  top: 40vh;
-  -webkit-transform: none;
-          transform: none;
 }
 
-.swiper-slide {
-  opacity: 0;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-}
-
-.swiper-slide-active {
-  opacity: 1;
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: block;
+  margin: 6px 0;
+  border-radius: 100%;
+  background: #000;
+  opacity: .2;
 }
 
 header {
@@ -855,6 +901,14 @@ nav {
   border-radius: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+#services {
+  margin-top: 1em;
+}
+
+#contact {
+  margin-top: 1em;
 }
 
 .contact {
