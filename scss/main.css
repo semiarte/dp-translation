@@ -619,7 +619,7 @@ a {
 }
 
 main {
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 main a {
@@ -961,9 +961,9 @@ nav {
   margin: 10px;
 }
 
-.elem-group .active {
-  top: -45px;
-  font-size: 70%;
+.elem-group .active-input {
+  top: -30px;
+  font-size: 75%;
 }
 
 input, textarea {

@@ -20,19 +20,30 @@ function close_menu() {
   $(".nav_menu").fadeOut();
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
   // smooth scroll
-  $("a").on('click', function(event) {
+  $("a").on('click', function (event) {
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 800, function(){
+      }, 800, function () {
         window.location.hash = hash;
       });
     }
   });
+  // animate labels
+  $('.pure-form input').on('focusin', function () {
+    $(this).parent().find('label').addClass('active-input');
+  });
+
+  $('.pure-form input').on('focusout', function () {
+    if (!this.value) {
+      $(this).parent().find('label').removeClass('active-input');
+    }
+  });
+
 });
 
 // header scroll
