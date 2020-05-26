@@ -8,6 +8,7 @@
         border-bottom: 1px solid #212121;
         border-right: none;
         width: 100%;
+        padding: .5em;
     }
 
     label {
@@ -30,6 +31,7 @@ input, textarea {
 textarea {
     width: 100%;
     border: 1px solid #212121;
+    margin-top: .5em;
     margin-bottom: .5em;
     min-height: 100px;
 }
