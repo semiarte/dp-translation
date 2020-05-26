@@ -515,10 +515,18 @@ img {
   z-index: 9;
   display: -ms-grid;
   display: grid;
+  position: fixed;
+  top: 0;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  position: fixed;
   width: 100%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.grid-container.header.header_bg {
+  top: -99px;
+  opacity: 0;
 }
 
 .flex-row {
@@ -896,6 +904,10 @@ nav {
   color: #278b9a;
 }
 
+#start p {
+  line-height: 1.5;
+}
+
 .dp-picture {
   display: block;
   border-radius: 100%;
@@ -905,6 +917,7 @@ nav {
 
 #services {
   margin-top: 1em;
+  line-height: 1.5;
 }
 
 #contact {
@@ -915,6 +928,7 @@ nav {
   -ms-flex-item-align: start;
       align-self: flex-start;
   padding-top: 10%;
+  line-height: 1.5;
 }
 
 .contact ul {

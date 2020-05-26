@@ -20,6 +20,40 @@ function close_menu() {
   $(".nav_menu").fadeOut();
 }
 
+$(document).ready(function(){
+  // smooth scroll
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+
+// header scroll
+/*function navigationScroll() {
+  var navElement = document.querySelector('.header');
+  var navHeight = navElement.clientHeight;
+  var reference = document.querySelector('#start');
+
+  function checkPosition() {
+    var positionY = reference.getBoundingClientRect().bottom;
+    if (positionY - navHeight < 0) {
+      navElement.classList.add('header_bg');
+    } else {
+      navElement.classList.remove('header_bg');
+    }
+  }
+  window.addEventListener('scroll', checkPosition);
+}
+navigationScroll();
+*/
+
 // animations on scroll
 var scroll = window.requestAnimationFrame ||
   // IE Fallback

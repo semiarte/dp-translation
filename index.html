@@ -22,7 +22,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div class="loader"></div>
-    <div class="grid-container">
+    <div class="grid-container header">
         <header>
             <h1>dp
                 <!-- <span class="sp">traducción</span> --> <span class="en">translation</span>
@@ -53,9 +53,9 @@
                 </header>
                 <div class="nav-items">
                     <ul role="navigation">
-                        <li><a href="#start">David Pérez</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#start" onclick="close_menu()">David Pérez</a></li>
+                        <li><a href="#services" onclick="close_menu()">Services</a></li>
+                        <li><a href="#contact" onclick="close_menu()">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -154,11 +154,11 @@
             </div>
         </section>
         <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-            <a href="#start"><span class="swiper-pagination-bullet" tabindex="0" role="button"
+            <a href="#start"><span class="swiper-pagination-bullet start-bullet" tabindex="0" role="button"
                     aria-label="Go to top"></span></a>
-            <a href="#services"><span class="swiper-pagination-bullet" tabindex="0" role="button"
+            <a href="#services"><span class="swiper-pagination-bullet services-bullet" tabindex="0" role="button"
                     aria-label="Go to services"></span></a>
-            <a href="#contact"><span class="swiper-pagination-bullet" tabindex="0" role="button"
+            <a href="#contact"><span class="swiper-pagination-bullet contact-bullet" tabindex="0" role="button"
                     aria-label="Go to contact"></span></a>
         </div>
     </main>
@@ -169,7 +169,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js.js"></script>
+    <script src="js/all.js?abc=123"></script>
 </body>
 
 </html>

@@ -1,0 +1,28 @@
+{
+  "name": "dp-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js.js",
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/semiarte/semiarte.github.io.git"
+  },
+  "keywords": [],
+  "author": "jmperez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/semiarte/semiarte.github.io/issues"
+  },
+  "homepage": "https://github.com/semiarte/semiarte.github.io#readme"
+}
