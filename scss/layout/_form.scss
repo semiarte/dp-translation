@@ -15,7 +15,6 @@
         position: absolute;
         top: -10px;
         transition: top .2s ease-in-out,  font-size .2s ease-in-out;
-        margin: 10px;
     }
 
     .active-input {
@@ -38,6 +37,7 @@ textarea {
 
 label {
     font-size: 75%;
+    margin: 10px;
 }
 
 [type="submit"] {

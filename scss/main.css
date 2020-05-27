@@ -585,9 +585,12 @@ body {
 }
 
 h1 {
-  color: black;
   font-weight: 600;
   font-size: 2.5em;
+}
+
+h1 a {
+  color: black;
 }
 
 h1 span {
@@ -897,7 +900,7 @@ nav {
 .nav_menu li a {
   color: #ff3c6e;
   list-style: none;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 .nav_menu li a:hover {
@@ -959,7 +962,6 @@ nav {
   top: -10px;
   -webkit-transition: top .2s ease-in-out,  font-size .2s ease-in-out;
   transition: top .2s ease-in-out,  font-size .2s ease-in-out;
-  margin: 10px;
 }
 
 .elem-group .active-input {
@@ -981,6 +983,7 @@ textarea {
 
 label {
   font-size: 75%;
+  margin: 10px;
 }
 
 [type="submit"] {
