@@ -154,7 +154,7 @@
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                <label class="form-check-label" for="invalidCheck">Agree to <a>terms and conditions</a></label>
+                                <label class="form-check-label" for="invalidCheck">Agree to <a data-target="#modal" data-toggle="modal">privacy policy</a></label>
                                 <div class="invalid-feedback">
                                     You must agree before submitting.
                                 </div>
@@ -179,6 +179,27 @@
             <p>David Pérez &copy; 2020</p>
         </div>
     </footer>
+    <div aria-hidden="true" aria-labelledby="privacy policy" class="modal fade" id="modal" role="dialog" tabindex="-1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Privacy policy</h5>
+					<div aria-label="Close" class="menu-button_close" data-dismiss="modal">
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+				</div>
+				<div class="modal-body">
+					<p>Le garantizamos la privacidad de los datos obtenidos a partir de este formulario.</p>
+					<p>Los datos de carácter personal solicitados se utilizarán única y exclusivamente para atender su solicitud de información o servicios, así como para solventar cualquier duda o pregunta que pudiera formular.</p>
+					<p>Los datos personales del usuario no serán cedidos a ninguna empresa ni estarán disponibles para terceros, siendo utilizados únicamente para los fines indicados.</p>
+				</div>
+				<div class="modal-footer">
+					<button class="pure-button" data-dismiss="modal" type="button">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
     <script src="js/all.js?abc=123"></script>
 </body>
 

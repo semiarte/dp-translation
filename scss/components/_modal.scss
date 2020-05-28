@@ -1,0 +1,92 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+    z-index: 1072;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity .15s linear;
+    &.show {
+        opacity: 1;
+    }
+}
+
+.modal.fade .modal-dialog {
+    transform: translate(0,-25%);
+    transition: transform .3s ease-out;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: .5rem;
+    pointer-events: none;
+}
+
+.modal.show .modal-dialog {
+    transform: translate(0,0);
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,1);
+    border-radius: .3rem;
+    outline: 0;
+    padding: 1em 2em 2em;
+}
+
+.modal-title {
+    font-size: 1.25em;
+}
+
+.modal-body p {
+    line-height: 1.5;
+}
+
+.pure-button {
+    padding: 1em 2em;
+    margin-top: 12px;
+    border: none;
+    color: #fff;
+    background-color: $sp;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    
+    @include on-event() {
+        background-color: $en;
+    }
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+    &.show {
+        opacity: .5;
+    }
+}

@@ -44,10 +44,15 @@ $(document).ready(function () {
     }
   });
 
-});
+  // scrollspy bullets
+  $('body').scrollspy({ target: '#bullets' });
 
-// scrollspy bullets
-$('body').scrollspy({ target: '#bullets' });
+  // modal
+  $('#modal').on('shown.bs.modal', function () {
+    $(this).trigger('focus')
+  })
+
+});
 
 // header scroll
 /*function navigationScroll() {
