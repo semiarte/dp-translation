@@ -13,7 +13,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/main.css?abc=123">
 </head>
 
@@ -43,10 +42,7 @@
             </div>
             <div class="nav_menu">
                 <header>
-                    <h1>dp
-                        <!-- <span class="sp">traducción</span> --> <span class="en">translation</span>
-                        <!-- <span class="nl">vertaling</span> -->
-                    </h1>
+                    <h1>dp <span class="en">translation</span></h1>
                 </header>
                 <div class="nav-items">
                     <ul role="navigation">
@@ -58,7 +54,7 @@
             </div>
         </nav>
     </div>
-    <main>
+    <main data-target="#bullets" data-offset="10">
         <!-- intro -->
         <section id="start" class="show-on-scroll">
             <div class="container">
@@ -129,43 +125,60 @@
                         </ul>
                     </div>
                     <div class="col form">
-                        <form action="" method="post" class="pure-form">
+                        <form action="" method="post" class="needs-validation pure-form" novalidate>
                             <div class="elem-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="visitor_name" pattern=[A-Z\sa-z]{3,20} required>
+                                <label for="name">Your Name <span>*</span></label>
+                                <input type="text" id="name" class="form-control" name="visitor_name" required>
+                                <div class="invalid-feedback">
+                                    Please write your full name.
+                                </div>
                             </div>
                             <div class="elem-group">
-                                <label for="title">Company</label>
-                                <input type="text" id="title" name="visitor_company" required>
+                                <label for="title">Company <span>*</span></label>
+                                <input type="text" id="title" class="form-control" name="visitor_company" required>
+                                <div class="invalid-feedback">
+                                    What´s your company name, please?
+                                </div>
                             </div>
                             <div class="elem-group">
-                                <label for="email">E-mail</label>
-                                <input type="email" id="email" name="visitor_email" required>
+                                <label for="email">E-mail <span>*</span></label>
+                                <input type="email" id="email" class="form-control" name="visitor_email" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid email.
+                                </div>
                             </div>
-                            <label for="message">Write your message</label>
-                            <textarea id="message" name="visitor_message" required></textarea>
+                            <label for="message">Write your message <span>*</span></label>
+                            <textarea id="message" class="form-control" name="visitor_message" required></textarea>
+                            <div class="invalid-feedback">
+                                Please tell me something.
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">Agree to <a>terms and conditions</a></label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
                             <button type="submit">Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-            <a href="#start"><span class="swiper-pagination-bullet start-bullet" tabindex="0" role="button"
-                    aria-label="Go to top"></span></a>
-            <a href="#services"><span class="swiper-pagination-bullet services-bullet" tabindex="0" role="button"
-                    aria-label="Go to services"></span></a>
-            <a href="#contact"><span class="swiper-pagination-bullet contact-bullet" tabindex="0" role="button"
-                    aria-label="Go to contact"></span></a>
-        </div>
     </main>
+    <div id="bullets" class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+        <a href="#start" class="list-group-item"><span class="swiper-pagination-bullet start-bullet" tabindex="0" role="button"
+                aria-label="Go to top"></span></a>
+        <a href="#services" class="list-group-item"><span class="swiper-pagination-bullet services-bullet" tabindex="0" role="button"
+                aria-label="Go to services"></span></a>
+        <a href="#contact" class="list-group-item"><span class="swiper-pagination-bullet contact-bullet" tabindex="0" role="button"
+                aria-label="Go to contact"></span></a>
+    </div>
     <footer>
         <div class="container-fluid">
             <p>David Pérez &copy; 2020</p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/all.js?abc=123"></script>
 </body>
 

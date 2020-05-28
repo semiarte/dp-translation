@@ -10,7 +10,7 @@ const replace = require('gulp-replace');
 
 const files = {
     cssPath: 'scss/*.css',
-    jsPath:'js.js',
+    jsPath: ['node_modules/jquery/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'js.js'],
 }
 
 // Tasks
@@ -38,7 +38,7 @@ function cacheBustTask(){
 // watch
 function watchTask() {
     watch(
-        [files.cssPath, files.jsPath],
+        [files.cssPath, 'node_modules/jquery/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js', 'js.js'],
         parallel(cssTask, jsTask)    
     );
 }

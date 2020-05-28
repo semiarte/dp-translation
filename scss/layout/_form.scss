@@ -31,19 +31,33 @@ textarea {
     width: 100%;
     border: 1px solid #212121;
     margin-top: .5em;
-    margin-bottom: .5em;
     padding: .5em;
     min-height: 100px;
+}
+
+.form-check {
+    margin-top: .75em;
+    margin-bottom: .75em;
+
+    .form-check-input,
+    .form-check-label a {
+        cursor:pointer;
+    }
 }
 
 label {
     font-size: 75%;
     margin: 10px;
+
+    span {
+        color: $sp;
+    }
 }
 
 [type="submit"] {
     font-size: 80%;
     padding: 1em;
+    margin-top: 12px;
     border: none;
     color: white;
     background-color: $sp;
@@ -54,3 +68,27 @@ label {
         background-color: $en;
     }
 }
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    font-size: 75%;
+    margin-top: .45em;
+    color: $invalid;
+}
+.was-validated .form-control:invalid {
+    border-color: $invalid;
+}
+
+.form-check-input.is-invalid~.form-check-label, 
+.was-validated .form-check-input:invalid~.form-check-label,
+.form-check-input.is-invalid~.form-check-label a, 
+.was-validated .form-check-input:invalid~.form-check-label a {
+    color: $invalid;
+}
+
+.was-validated .form-control:invalid~.invalid-feedback,
+.was-validated .form-check-input:invalid~.invalid-feedback {
+    display: block;
+}
+

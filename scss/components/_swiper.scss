@@ -8,12 +8,20 @@
   right: 4rem;
 }
 
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+}
 .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
   display: block;
   margin: 6px 0;
   border-radius: 100%;
-  background: #000;
+  background-color: #000;
   opacity: .2;
+}
+
+.list-group-item.active .swiper-pagination-bullet {
+  background-color: $en;
+  opacity: 1;
 }

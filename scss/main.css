@@ -468,6 +468,7 @@ html {
 
 body {
   position: relative;
+  font-family: "Montserrat", sans-serif;
 }
 
 img {
@@ -578,10 +579,6 @@ img {
       -ms-flex: 0 0 58.33333%;
           flex: 0 0 58.33333%;
   max-width: 58.33333%;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -845,14 +842,23 @@ svg #wheel {
   right: 4rem;
 }
 
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+}
+
 .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
   display: block;
   margin: 6px 0;
   border-radius: 100%;
-  background: #000;
+  background-color: #000;
   opacity: .2;
+}
+
+.list-group-item.active .swiper-pagination-bullet {
+  background-color: #278b9a;
+  opacity: 1;
 }
 
 header {
@@ -977,9 +983,18 @@ textarea {
   width: 100%;
   border: 1px solid #212121;
   margin-top: .5em;
-  margin-bottom: .5em;
   padding: .5em;
   min-height: 100px;
+}
+
+.form-check {
+  margin-top: .75em;
+  margin-bottom: .75em;
+}
+
+.form-check .form-check-input,
+.form-check .form-check-label a {
+  cursor: pointer;
 }
 
 label {
@@ -987,9 +1002,14 @@ label {
   margin: 10px;
 }
 
+label span {
+  color: #ff3c6e;
+}
+
 [type="submit"] {
   font-size: 80%;
   padding: 1em;
+  margin-top: 12px;
   border: none;
   color: white;
   background-color: #ff3c6e;
@@ -1000,6 +1020,30 @@ label {
 
 [type="submit"]:hover {
   background-color: #278b9a;
+}
+
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  font-size: 75%;
+  margin-top: .45em;
+  color: #eb2f06;
+}
+
+.was-validated .form-control:invalid {
+  border-color: #eb2f06;
+}
+
+.form-check-input.is-invalid ~ .form-check-label,
+.was-validated .form-check-input:invalid ~ .form-check-label,
+.form-check-input.is-invalid ~ .form-check-label a,
+.was-validated .form-check-input:invalid ~ .form-check-label a {
+  color: #eb2f06;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback,
+.was-validated .form-check-input:invalid ~ .invalid-feedback {
+  display: block;
 }
 
 footer {
