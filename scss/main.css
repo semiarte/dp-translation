@@ -468,7 +468,8 @@ html {
 
 body {
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 img {
@@ -774,6 +775,29 @@ li {
   color: #278b9a;
 }
 
+.up-arrow {
+  position: absolute;
+  left: 18%;
+  bottom: 24%;
+  cursor: pointer;
+  text-align: center;
+}
+
+.up-arrow .bar {
+  background-color: white;
+  width: 15px;
+}
+
+.up-arrow .bar:nth-of-type(1) {
+  -webkit-transform: translateX(10px) translateY(12px) rotate(45deg);
+          transform: translateX(10px) translateY(12px) rotate(45deg);
+}
+
+.up-arrow .bar:nth-of-type(2) {
+  -webkit-transform: translateY(0) rotate(135deg);
+          transform: translateY(0) rotate(135deg);
+}
+
 .down-arrow {
   position: absolute;
   left: 50%;
@@ -828,6 +852,28 @@ li {
 svg #wheel {
   -webkit-animation: scroll ease 2s infinite;
           animation: scroll ease 2s infinite;
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 65px;
+  right: 3.15rem;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #ff3c6e;
+  text-align: center;
+  line-height: 2.5;
+  z-index: 9;
+  border-radius: 50%;
+}
+
+.back-to-top:hover, .back-to-top:active, .back-to-top:focus {
+  color: white;
+  background-color: #278b9a;
 }
 
 .modal {
@@ -979,6 +1025,10 @@ header span {
 nav {
   position: relative;
   padding-right: 3.12rem;
+}
+
+.header_up {
+  top: -99px;
 }
 
 .nav_menu {

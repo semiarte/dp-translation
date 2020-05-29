@@ -1,0 +1,18 @@
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 65px;
+    right: 3.15rem;
+    transition: .2s ease-in-out;
+    @include size(40px);
+    color: white;
+    background-color: $sp;
+    text-align: center;
+    line-height: 2.5;
+    z-index: 9;
+    border-radius: 50%;
+    @include on-event(){
+        color: white;
+        background-color: $en;
+    }
+}
