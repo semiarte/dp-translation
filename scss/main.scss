@@ -2,10 +2,10 @@
 
 @import "abstracts/variables", "abstracts/mixins", "abstracts/animations";
 
-@import "base/base", "base/container", "base/grid", "base/flex", "base/typo";
+@import "base/base", "base/container", "base/grid", "base/flex", "base/typo", "base/icons";
 
 @import "components/loader", "components/lang", "components/burger",
-  "components/social", "components/arrow", "components/mouse", "components/totop", "components/modal",
+  "components/social", "components/desplegable" ,"components/arrow", "components/mouse", "components/totop", "components/modal",
   "components/swiper";
 
 @import "layout/header", "layout/navigation", "layout/intro", "layout/services",
