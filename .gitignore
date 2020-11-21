@@ -1,4 +1,6 @@
 /react.html
-/node_modules/
-/package.json
-/package-lock.json
+/node_modules
+/css
+package.json
+package-lock.json
+gulpfile.js
