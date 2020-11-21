@@ -37,8 +37,13 @@
   }
 }
 
+#who-we-are {
+  padding-top: 2em;
+}
+
 #start,
-#services {
+#services,
+#who-we-are {
   opacity: 0;
   transition: opacity .4s ease-in;
   &.is-visible {

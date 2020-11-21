@@ -1,19 +1,7 @@
-.lanzador{
-    color: #e94057;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-  }
-  
-  .bloque-contenedor{
-    overflow: hidden;
-    max-height: 0;
-    background-color: #ECECEC;
-    transition: max-height .3s;
-  }
-  
-  .bloque-contenido{
-    padding: 1rem 2rem;
-  }
+.myAccordion h3{
+  color: $sp;
+  font-size: 1em;
+  text-decoration: none;    
+  font-weight: normal;
+  cursor: pointer;
+}

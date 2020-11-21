@@ -63,6 +63,41 @@ $(document).ready(function () {
     $(this).trigger('focus')
   });
 
+  // accordion
+  var swiperScroll = null;
+  var cuantoScroll = 0;
+  $(".myAccordion").each(function () {
+    $(this).find(">div").css("display", "none");
+    $(this).find(">h3").click(function () {
+        if ($(this).next().css("display") == "block") {
+            $(this).parent().find(">div").slideUp();
+            $(this).parent().find(">h3").removeClass("open");
+        } else {
+            $(this).parent().find(">div").slideUp();
+            $(this).parent().find(">h3").removeClass("open");
+            $(this).next().slideDown();
+            $(this).addClass("open");
+            if (swiperScroll != null) {
+                cuantoScroll = $(this);
+                setTimeout(function () {
+                    swiperScroll.update();
+                    swiperScroll.setTransition(400);
+                    swiperScroll.setTranslate((cuantoScroll.offset().top - $(".swiper-wrapper").offset().top) * -1);
+
+                    $(window).resize();
+                }, 600);
+            }
+        }
+        if (swiperScroll != null) {
+            swiperScroll.update();
+        }
+
+    });
+  });
+
+  // file browser
+  bsCustomFileInput.init();
+
 });
 
 // header scroll
